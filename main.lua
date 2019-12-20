@@ -1,14 +1,15 @@
 Object = require 'libraries/classic/classic'
-Test = require 'objects/Test'
+
+Circle = require 'objects/HyperCircle'
 
 function love.load()
-    test_instance = Test()
+    circle = Circle(400, 300, 50, 10, 120)
 end
 
-function love.update()
-
+function love.update(dt)
+    circle:update(dt)
 end
 
 function love.draw()
-
+    circle:draw()
 end
